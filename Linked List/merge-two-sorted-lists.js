@@ -18,3 +18,6 @@ var mergeTwoLists = function (list1, list2) {
 
   return list.next;
 };
+
+// Time: O(n + m)
+// Space: O(n + m)

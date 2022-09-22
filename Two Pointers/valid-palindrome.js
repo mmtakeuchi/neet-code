@@ -18,3 +18,6 @@ var isPalindrome = function (s) {
 
   return true;
 };
+
+// Time: O(n)
+// Space: O(1)
