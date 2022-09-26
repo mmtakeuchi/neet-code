@@ -13,6 +13,9 @@ var reverseList = function (head) {
   return prev;
 };
 
+// Time: O(n)
+// Space: O(1)
+
 // Recursively
 var reverseList = function (head) {
   if (!head) return null;
@@ -28,3 +31,6 @@ var reverseList = function (head) {
 
   return newHead;
 };
+
+// Time: O(n)
+// Space: O(n)
