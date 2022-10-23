@@ -1,17 +1,22 @@
+// LeetCode #409
 var longestPalindrome = function (s) {
-  let chars = new Set();
-  let result = 0;
+  let chars = {};
+  let len = 0;
 
-  for (let char of s) {
-    if (chars.has(char)) {
-      result += 2;
-      chars.delete(char);
+  for (let i = 0; i < s.length; i++) {
+    let cur = s[i];
+
+    if (chars[cur] === 1) {
+      delete chars[cur];
+      len += 2;
     } else {
-      chars.add(char, 1);
+      chars[cur] = 1;
     }
   }
 
-  return result + (chars.size > 0 ? 1 : 0);
+  const extraChar = Object.keys(chars).length > 0 ? 1 : 0;
+
+  return len + extraChar;
 };
 
 // Time: O(n)
